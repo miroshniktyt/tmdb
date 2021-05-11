@@ -16,13 +16,14 @@ class CreditCell: UICollectionViewCell {
             
             titleLabel.text = credit.name
             subtitleLabel.text = credit.subtitle
-            imageView.setImage(path: credit.image, size: .w154)
+            imageView.setImage(path: credit.image, size: .w154, defaultImage: Consts.creditsImagePlaceholder)
         }
     }
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
+        imageView.tintColor = .secondarySystemBackground
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = Consts.Layout.profileImageSize.width / 2
         imageView.ancherSize(size: Consts.Layout.profileImageSize)

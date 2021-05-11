@@ -35,4 +35,6 @@ struct Consts {
     static let imageBaseUrl = "https://image.tmdb.org/t/p/"
     static let apiBaseUrl = "https://api.themoviedb.org/3/"
     static let apiKey = "087879f7d79a9ada3ed77d47ffe462fb"
+    
+    static let creditsImagePlaceholder = UIImage(systemName: "person.circle.fill")
 }

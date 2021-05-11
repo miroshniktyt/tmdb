@@ -27,6 +27,8 @@
 		CE1BD5E42649B9D2008E324B /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BD5E32649B9D2008E324B /* Cast.swift */; };
 		CE1BD5E92649B9EE008E324B /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BD5E82649B9EE008E324B /* Crew.swift */; };
 		CE7414742649CFB200346E91 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7414732649CFB200346E91 /* ImageLoader.swift */; };
+		CE741487264AA66C00346E91 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE741486264AA66C00346E91 /* ImageCache.swift */; };
+		CE74148A264AA69D00346E91 /* ImageSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE741489264AA69D00346E91 /* ImageSetter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		CE1BD5E32649B9D2008E324B /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		CE1BD5E82649B9EE008E324B /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 		CE7414732649CFB200346E91 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		CE741486264AA66C00346E91 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		CE741489264AA69D00346E91 /* ImageSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSetter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CE034080264802A800C7882C /* Extensions.swift */,
+				CE741489264AA69D00346E91 /* ImageSetter.swift */,
 				CE03407B264802A800C7882C /* Consts.swift */,
 			);
 			path = Helpers;
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				CE03407C264802A800C7882C /* Service.swift */,
+				CE741486264AA66C00346E91 /* ImageCache.swift */,
 				CE7414732649CFB200346E91 /* ImageLoader.swift */,
 			);
 			path = Networking;
@@ -225,9 +231,11 @@
 				CE034083264802A800C7882C /* MovieDetailView.swift in Sources */,
 				CE1BD5CE2649487F008E324B /* CreditType.swift in Sources */,
 				CE034086264802A800C7882C /* CreditsCollectionView.swift in Sources */,
+				CE74148A264AA69D00346E91 /* ImageSetter.swift in Sources */,
 				CE034089264802A800C7882C /* MovieDetailViewController.swift in Sources */,
 				CE1BD5E92649B9EE008E324B /* Crew.swift in Sources */,
 				CE1BD5DC2649B8F0008E324B /* Credits.swift in Sources */,
+				CE741487264AA66C00346E91 /* ImageCache.swift in Sources */,
 				CE1BD5C326494646008E324B /* RootNavigationController.swift in Sources */,
 				CE034084264802A800C7882C /* CreditCell.swift in Sources */,
 				CE034085264802A800C7882C /* MovieCell.swift in Sources */,

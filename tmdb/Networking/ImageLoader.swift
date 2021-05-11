@@ -7,34 +7,36 @@
 
 import UIKit
 
-
-extension UIImageView {
+struct ImageLoader {
     
-    func setDefauldImage() {
-        image = UIImage(systemName: "person.circle.fill")
-        tintColor = .secondarySystemBackground
-    }
-    
-    func setImage(path: String?, size: Consts.ImageSize = .w154) {
-        guard let path = path else {
-            setDefauldImage()
-            return
-        }
+    func setImage(for imageView: UIImageView, with url: String) {
+        let cache = ImageCache.shared
         
-        let urlString = Consts.imageBaseUrl + size.rawValue + path
-                
-        fetchImage(urlString: urlString)
+        if let image = cache.getImage(for: url) {
+            imageView.image = image
+        } else {
+            fetchImage(for: url) { (image) in
+                if let image = image {
+                    imageView.image = image
+                    cache.setImage(image, for: url)
+                } else {
+                    print("can't fetch image for: \(url)")
+                }
+            }
+        }
     }
     
-    func fetchImage(urlString: String) {
-        guard let url = URL(string: urlString) else { return }
+    private func fetchImage(for url: String, completion: @escaping (UIImage?) -> ()) {
+        guard let url = URL(string: url) else { return }
         
         DispatchQueue.global(qos: .userInitiated).async {
             let data = try? Data(contentsOf: url)
             DispatchQueue.main.async {
                 if let data = data {
                     let image = UIImage(data: data)
-                    self.image = image
+                    completion(image)
+                } else {
+                    completion(nil)
                 }
             }
         }
